@@ -5,14 +5,7 @@
 	box-sizing: border-box;
 
 }
-.parallax
-{
-	min-height: 500px;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
+
 header h1
 {
 
@@ -32,12 +25,8 @@ header h1
 #navigation a
 {
 	color: white;
-	/* margin-right: 120px; */
-	
 
 }
-
-
 #logo
 {
 	height: 200px;
@@ -168,7 +157,7 @@ header h1
  }
  #service-header
  {
-	 margin-top: 100px;
+	 margin-top: -100px;
 	 margin-left: 100px;
 	  background-color:#131211;
 	 opacity: 0.8;
@@ -240,4 +229,32 @@ footer p a span
 {
 	background-color: rgb(199, 148, 66);
 	box-shadow: 5px 5px 8px black;
+}
+
+@media(max-width:567px)
+{
+	#menuid >p
+	{
+		 font-size: 90%; 
+		 text-align: center;
+		 margin-left: 5%;
+	}
+	#menuid >btn
+	{
+		width: 100%;
+	}
+}
+@media(min-width:992px) and (max-width:1400px )
+{
+	#service-header
+	{
+		margin-top: -2%;
+	}
+
+}
+@media(min-width:992px) and (max-width:1123px)
+{
+	#div-img1, #div-img2, #div-img3{
+		display: none;
+	}
 }
