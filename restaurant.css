@@ -258,3 +258,20 @@ footer p a span
 		display: none;
 	}
 }
+/* --------------MENU--------------- */
+#menu-carousel
+{
+	height: 800px;
+}
+#menu-icon
+{
+	margin-bottom: 400px;
+	margin-right: 100px;
+}
+#menu-heading{
+	margin-top: 300px;
+	margin-right: -250px;
+	font-family: 'Cuprum', sans-serif;
+	padding-bottom: 20px;
+	border-bottom: 4px solid white;
+}
