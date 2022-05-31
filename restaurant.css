@@ -259,19 +259,47 @@ footer p a span
 	}
 }
 /* --------------MENU--------------- */
-#menu-carousel
+/* #menu-carousel
 {
 	height: 800px;
-}
+	filter: blur(2px);
+} */
 #menu-icon
 {
-	margin-bottom: 400px;
+	margin-top: -300px;
 	margin-right: 100px;
+
 }
 #menu-heading{
-	margin-top: 300px;
-	margin-right: -250px;
+	margin-bottom: 200px;
+	margin-right: 90px;
 	font-family: 'Cuprum', sans-serif;
+	font-size:47px;
+	letter-spacing: 6px;
 	padding-bottom: 20px;
-	border-bottom: 4px solid white;
+
+	/* border-bottom: 4px solid white; */
+
+}
+#menu-carousel
+{
+	background-image: url("istockphoto-1303583671-170667a.jpg");
+	z-index: 2;
+
+	/* Set a specific height */
+	min-height: 800px; 
+  
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#menu-content
+{
+	font-family: 'Cuprum', sans-serif;
+	font-size: 20px;
+	letter-spacing: 1px;
+	margin-top: 130px;
+
 }
