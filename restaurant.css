@@ -268,15 +268,18 @@ footer p a span
 {
 	margin-top: -300px;
 	margin-right: 100px;
+	height: 280px;
+	width: 280px;
 
 }
 #menu-heading{
 	margin-bottom: 200px;
-	margin-right: 90px;
+	margin-right: 8%;
 	font-family: 'Cuprum', sans-serif;
 	font-size:47px;
 	letter-spacing: 6px;
 	padding-bottom: 20px;
+	position: relative;
 
 	/* border-bottom: 4px solid white; */
 
@@ -298,8 +301,23 @@ footer p a span
 #menu-content
 {
 	font-family: 'Cuprum', sans-serif;
-	font-size: 20px;
+	font-size: 24px;
 	letter-spacing: 1px;
 	margin-top: 130px;
+	position: absolute;
+	left:64%;
+}
+/* media query for menu carousel */
+@media(max-width:1400px) and (min-width:992px)
+{
+ #menu-heading
+	{
+		margin-right: 11%;
+	}
+	#menu-content
+	{
+
+		} 
+
 
 }
