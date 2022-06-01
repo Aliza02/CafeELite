@@ -326,20 +326,13 @@ footer p a span
 	text-decoration: none;
 	color: black;
 }
-.hover-img{
-	display: none;
-	transition: .5s ease;
-	overflow: hidden;
-	cursor: pointer;
+.food-categories img{
+	height: 30px;
+	margin-left: 49%;
 
 }
-.food-categories a:hover .hover-img{
-	display: block;
-	transition:.5s ease-in;
+#coffee .coffee-img{
 	height: 200px;
-	width: 100%;
-	
-}
-.food-categories a:hover h1{
-	display: none;
+	padding:20px 10px 10px 20px;
+	margin-left: 60px;
 }
