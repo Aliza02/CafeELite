@@ -321,3 +321,25 @@ footer p a span
 
 
 }
+
+.food-categories a{
+	text-decoration: none;
+	color: black;
+}
+.hover-img{
+	display: none;
+	transition: .5s ease;
+	overflow: hidden;
+	cursor: pointer;
+
+}
+.food-categories a:hover .hover-img{
+	display: block;
+	transition:.5s ease-in;
+	height: 200px;
+	width: 100%;
+	
+}
+.food-categories a:hover h1{
+	display: none;
+}
