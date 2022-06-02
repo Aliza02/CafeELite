@@ -331,8 +331,28 @@ footer p a span
 	margin-left: 49%;
 
 }
-#coffee .coffee-img{
+#coffee #addition
+{
+	/* transform: rotate(120deg); */
+}
+#coffee .food-img{
 	height: 200px;
 	padding:20px 10px 10px 20px;
 	margin-left: 60px;
+}
+@media(min-width:992px) and (max-width:1350px)
+{
+#coffee p{
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+}
+@media(max-width:748px)
+{
+	#coffee p{
+		overflow:hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}	
 }
