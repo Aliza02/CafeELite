@@ -335,14 +335,15 @@ footer p a span
 {
 	/* transform: rotate(120deg); */
 }
-#coffee .food-img{
+.container-fluid .food-img{
 	height: 200px;
+	width: 200px;
 	padding:20px 10px 10px 20px;
 	margin-left: 60px;
 }
 @media(min-width:992px) and (max-width:1350px)
 {
-#coffee p{
+#coffee p,#bakistry p{
 	overflow:hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -350,7 +351,7 @@ footer p a span
 }
 @media(max-width:748px)
 {
-	#coffee p{
+	#coffee p, #bakistry p{
 		overflow:hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
