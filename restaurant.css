@@ -343,7 +343,7 @@ footer p a span
 }
 @media(min-width:992px) and (max-width:1350px)
 {
-#coffee p,#bakistry p{
+.container-fluid p{
 	overflow:hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -351,7 +351,7 @@ footer p a span
 }
 @media(max-width:748px)
 {
-	#coffee p, #bakistry p{
+	.container-fluid p{
 		overflow:hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
