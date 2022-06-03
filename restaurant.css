@@ -331,10 +331,7 @@ footer p a span
 	margin-left: 49%;
 
 }
-#coffee #addition
-{
-	/* transform: rotate(120deg); */
-}
+
 .container-fluid .food-img{
 	height: 200px;
 	width: 200px;
@@ -356,4 +353,12 @@ footer p a span
 		white-space: nowrap;
 		text-overflow: ellipsis;
 	}	
+}
+.addition.active{
+	transform: rotate(45deg);
+	transition: .5s ease;
+}
+.addition.deactive{
+	transform: rotate(0deg);
+	transition: .5s ease;
 }
