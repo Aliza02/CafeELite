@@ -116,6 +116,7 @@ header h1
 {
 
 	background-color: rgba(94, 54, 9, 0.808);
+	color: white;
 	border-bottom: 3px #5c3613 solid;
 	border-top: 3px #5c3613 solid;
 	height: 30%;
@@ -281,12 +282,11 @@ footer p a span
 	padding-bottom: 20px;
 	position: relative;
 
-	/* border-bottom: 4px solid white; */
 
 }
 #menu-carousel
 {
-	background-image: url("istockphoto-1303583671-170667a.jpg");
+	background-image: url("Capture.PNG");
 	z-index: 2;
 
 	/* Set a specific height */
@@ -303,38 +303,47 @@ footer p a span
 	font-family: 'Cuprum', sans-serif;
 	font-size: 24px;
 	letter-spacing: 1px;
-	margin-top: 130px;
+	/* margin-top: -180px; */
+
 	position: absolute;
-	left:64%;
+	bottom: 50%;
+	left:32%;
 }
 /* media query for menu carousel */
-@media(max-width:1400px) and (min-width:992px)
+@media(max-width:1400px) and (min-width:390px)
 {
- #menu-heading
+
+	#menu-icon{
+		margin-left: 15%;
+	}
+ 	#menu-heading
 	{
-		margin-right: 11%;
+		margin-left: 12%;
 	}
 	#menu-content
 	{
+		position: absolute;
+		left: 28%;
+	} 
+}
 
-		} 
-
-
+.food-categories{
+	background-color: rgba(94, 54, 9, 0.808);
+	color: white;
 }
 
 .food-categories a{
 	text-decoration: none;
 	color: black;
 }
-.food-categories img{
+.food-categories .addition{
 	height: 30px;
 	margin-left: 49%;
-
 }
 
 .container-fluid .food-img{
 	height: 200px;
-	width: 200px;
+	width: 250px;
 	padding:20px 10px 10px 20px;
 	margin-left: 60px;
 }
@@ -354,6 +363,7 @@ footer p a span
 		text-overflow: ellipsis;
 	}	
 }
+
 .addition.active{
 	transform: rotate(45deg);
 	transition: .5s ease;
