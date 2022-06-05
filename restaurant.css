@@ -5,6 +5,9 @@
 	box-sizing: border-box;
 
 }
+body{
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
 
 header h1
 {
@@ -390,6 +393,7 @@ footer p a span
 }
 #contact img{
 	height: 500px;
+
 }
 #contact #content{
 	padding: 200px;
@@ -399,9 +403,57 @@ footer p a span
 }
 #contact #text{
 	position: absolute;
-	bottom: 140px;
-	left: 230px;
+	bottom: 200px;
+	left: 180px;
+	transform: rotate(24deg);
 }
+.contact-info-1{
+	background-color: #b37924;
+	color: black;
+	/* text-align: center; */
+	padding: 60px;
+}
+.contact-info-1 label, .contact-info-1 input, .contact-info-1 textarea{
+	margin-left: 30px;
+	
+}
+.contact-info-1 input, .contact-info-1 textarea{
+	width: 534px;
+	padding: 10px;
+	font-size: 20px;
+	border-radius: 5px;
+	outline: none;
+	border: 0;
+	
+}
+.contact-info-1 label{
+	font-size: 20px;
+	font-weight: bold;
+}
+.contact-info-1 button{
+	font-size: 16px;
+	margin-left: 250px;
+	margin-top: 10px;
+	width: 140px;
+	height: 40px;
+	padding: 2px;
+	border: 0;
+	background-color: #131211;
+	color: white;
+	border-radius: 5px;
+}
+
+.contact-info-2{
+	padding: 90px;
+}
+.contact-info-2 a{
+	margin-right: 3px;
+	
+}
+.contact-info-2 span{
+	font-size: 40px;
+}
+
 
 
 
