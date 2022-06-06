@@ -400,6 +400,7 @@ footer p a span
 	background-color: #b37924;
 	transform: rotate(-24deg);
 	z-index: -1;
+	position: relative;
 }
 #contact #text{
 	position: absolute;
@@ -407,8 +408,14 @@ footer p a span
 	left: 180px;
 	transform: rotate(24deg);
 }
+#contact img{
+	
+	width: 450px;
+	height: 450px;
+}
 .contact-info-1{
 	background-color: #b37924;
+	
 	color: black;
 	/* text-align: center; */
 	padding: 60px;
@@ -452,6 +459,30 @@ footer p a span
 }
 .contact-info-2 span{
 	font-size: 40px;
+}
+
+@media(max-width:1317px)
+{
+
+	
+	.contact-info-1 input, .contact-info-1 textarea{
+		width: 100%;
+		margin-left:-2%
+	}
+	.contact-info-1 button{
+		margin-left: 33%;
+	}
+	
+}
+
+@media(max-width:1349px)
+{
+	#content #text
+	{
+		position: absolute;
+		top:40%;
+		left: 25%;
+	}
 }
 
 
