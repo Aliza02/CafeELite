@@ -42,8 +42,129 @@ function removeActiveClasses()
           })
     })
 }
+// cart
 
-function order_option()
+let products=[
+    {
+        name:'Chocolate Fudge',
+        tag:'chocolate fudge',
+        price: '1',
+        incart:0
+    },
+    {
+        name:'Cupcakes',
+        tag:'cupcakes',
+        price: '1',
+        incart:0
+    },
+    {
+        name:'Cookies',
+        tag:'cookies',
+        price: '1',
+        incart:0
+    },
+    {
+        name:'French Toast',
+        tag:'french toast',
+        price: '1',
+        incart:0
+    },
+    {
+        name:'Cheese Omelette',
+        tag:'cheese omellete',
+        price: '1',
+        incart:0
+    },
+    {
+        name:'Pancakes',
+        tag:'pancakes',
+        price: '1',
+        incart:0
+    },
+    {
+        name:'Egg Muffins',
+        tag:'egg muffins',
+        price: '1',
+        incart:0
+    },
+    {
+        name:'Cardamom Rolls ',
+        tag:'cardamom rolls',
+        price: '1',
+        incart:0
+    },
+    {
+        name:'Frittatas',
+        tag:'frittatas',
+        price: '1',
+        incart:0
+    },
+]
+let  cart=document.querySelectorAll('.add-cart');
+for(let i=0; i<cart.length; i++)
 {
-    
+    cart[i].addEventListener('click',()=>{
+        cartnumber(products[i]);
+        totalcost();
+    })
 }
+
+function cartnumber(product)
+{
+
+    let productnumber=localStorage.getItem('cartnumber');
+    productnumber=parseInt(productnumber);
+    if(productnumber)
+    {
+    localStorage.setItem('cartnumber',productnumber+1);
+    document.querySelector('.nav-item span').textContent=productnumber +1;
+    }
+    else{
+        localStorage.setItem('cartnumber',1);
+        document.querySelector('.nav-item span').textContent=1;
+    }
+
+    setitems(product);
+}
+
+function setitems(product)
+{
+    let cartitem=localStorage.getItem('productsincart');
+    cartitem=JSON.parse(cartitem);
+    
+    if(cartitem!=null)
+    {
+        if(cartitem[product.tag]==undefined){
+            cartitem={
+                ...cartitem,
+                [product.tag]:product
+            }
+        }
+        cartitem[product.tag].incart+=1;
+    }
+    else{
+        product.incart=1;
+        cartitem={
+        [product.tag]:product
+       }
+    }
+   
+   localStorage.setItem('productsincart',JSON.stringify(cartitem));
+}
+
+function totalcost()
+{
+
+}
+
+function onloadcartnumber()
+{
+    let productnumber=localStorage.getItem('cartnumber');
+    if(productnumber)
+    {
+        document.querySelector('.nav-item span').textContent=productnumber;
+        
+    }
+}
+
+onloadcartnumber();
