@@ -47,7 +47,7 @@ function removeActiveClasses()
 let products=[
     {
         name:'Chocolate Fudge',
-        tag:'chocolate fudge',
+        tag:'fudge',
         price: '1',
         incart:0
     },
@@ -65,13 +65,13 @@ let products=[
     },
     {
         name:'French Toast',
-        tag:'french toast',
+        tag:'french',
         price: '5',
         incart:0
     },
     {
         name:'Cheese Omelette',
-        tag:'cheese omellete',
+        tag:'omelette',
         price: '10',
         incart:0
     },
@@ -83,7 +83,7 @@ let products=[
     },
     {
         name:'Egg Muffins',
-        tag:'egg muffins',
+        tag:'eggmuffins',
         price: '12',
         incart:0
     },
@@ -95,7 +95,7 @@ let products=[
     },
     {
         name:'Frittatas',
-        tag:'frittatas',
+        tag:'frittas',
         price: '10',
         incart:0
     },
@@ -157,7 +157,7 @@ function totalcost(product)
     // console.log('product price', product.price);
     let cartcost=localStorage.getItem('totalcost');
     
-    console.log('my cart', cartcost);
+   
     if(cartcost!=null){
         cartcost=parseInt(cartcost);
         product.price=parseInt(product.price);
@@ -182,4 +182,44 @@ function onloadcartnumber()
     }
 }
 
+
+function displaycart(){
+    let cartitem=localStorage.getItem('productsincart');
+    let cartcost=localStorage.getItem('totalcost');
+    cartitem=JSON.parse(cartitem);
+    // console.log(cartitem);
+    let productcontainer=document.querySelector('.product-cart');
+    let pricecontainer=document.querySelector('.price');
+    
+
+    if(cartitem && productcontainer){
+        productcontainer.innerHTML='';
+        Object.values(cartitem).map(item=>{
+            productcontainer.innerHTML+=`
+            <div class="product col-lg-3 col-md-3">
+            <i class="bi bi-x close-btn"></i>
+            <img src="${item.tag}.PNG">
+            <span class="name">${item.name}</span>            
+           </div> 
+           <div class=" product-price col-lg-3 col-md-3">${item.price}</div>
+        <div class="product-quantity col-lg-3 col-md-3">${item.incart}</div>
+
+        <div class="product-price col-lg-3 col-md-3">${item.incart*item.price}</div>
+            `
+        }
+       
+        )
+        productcontainer.innerHTML+=`
+        <div class="baskettotal">
+        <h4 class="baskettotal-heading">Basket Total:</h4>
+        <h4 class="basket-total">  ${cartcost}</h4>
+        `
+    }
+    
+}
+
+
 onloadcartnumber();
+displaycart();
+
+
