@@ -54,49 +54,49 @@ let products=[
     {
         name:'Cupcakes',
         tag:'cupcakes',
-        price: '1',
+        price: '4',
         incart:0
     },
     {
         name:'Cookies',
         tag:'cookies',
-        price: '1',
+        price: '3',
         incart:0
     },
     {
         name:'French Toast',
         tag:'french toast',
-        price: '1',
+        price: '5',
         incart:0
     },
     {
         name:'Cheese Omelette',
         tag:'cheese omellete',
-        price: '1',
+        price: '10',
         incart:0
     },
     {
         name:'Pancakes',
         tag:'pancakes',
-        price: '1',
+        price: '10',
         incart:0
     },
     {
         name:'Egg Muffins',
         tag:'egg muffins',
-        price: '1',
+        price: '12',
         incart:0
     },
     {
         name:'Cardamom Rolls ',
         tag:'cardamom rolls',
-        price: '1',
+        price: '12',
         incart:0
     },
     {
         name:'Frittatas',
         tag:'frittatas',
-        price: '1',
+        price: '10',
         incart:0
     },
 ]
@@ -105,7 +105,7 @@ for(let i=0; i<cart.length; i++)
 {
     cart[i].addEventListener('click',()=>{
         cartnumber(products[i]);
-        totalcost();
+        totalcost(products[i]);
     })
 }
 
@@ -152,8 +152,23 @@ function setitems(product)
    localStorage.setItem('productsincart',JSON.stringify(cartitem));
 }
 
-function totalcost()
+function totalcost(product)
 {
+    // console.log('product price', product.price);
+    let cartcost=localStorage.getItem('totalcost');
+    
+    console.log('my cart', cartcost);
+    if(cartcost!=null){
+        cartcost=parseInt(cartcost);
+        product.price=parseInt(product.price);
+        cartcost+=product.price;
+        localStorage.setItem('totalcost', cartcost );
+
+    }
+    else{
+        localStorage.setItem('totalcost',product.price);
+    }
+    
 
 }
 
