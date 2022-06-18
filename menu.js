@@ -187,7 +187,6 @@ function displaycart(){
     let cartitem=localStorage.getItem('productsincart');
     let cartcost=localStorage.getItem('totalcost');
     cartitem=JSON.parse(cartitem);
-    // console.log(cartitem);
     let productcontainer=document.querySelector('.product-cart');
     let pricecontainer=document.querySelector('.price');
     

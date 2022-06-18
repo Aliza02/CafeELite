@@ -501,7 +501,8 @@ footer p a span
 .cart-container
 {
 	border-bottom: 2px solid  #131211;
-	height: auto;
+	height: 1600px;
+
 }
 .product img {
 	width: 150px;
@@ -515,6 +516,12 @@ display: flex;
 max-width:80%;
 justify-content: flex-end;
 
+}
+@media(min-width:992px )
+{
+	.cart-container{
+		height: 500px;
+	}
 }
 
 
