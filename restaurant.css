@@ -375,9 +375,10 @@ footer p a span
 	transform: rotate(0deg);
 	transition: .5s ease;
 }
-/* contact page */
+
+/*---------------------- contact page------------------------- */
 #contact{
-	min-height: 500px;
+	min-height: 900px;
 }
 #contact img{
 	height: 500px;
@@ -403,10 +404,9 @@ footer p a span
 }
 .contact-info-1{
 	background-color: #b37924;
-	
 	color: black;
-	/* text-align: center; */
 	padding: 60px;
+
 }
 .contact-info-1 label, .contact-info-1 input, .contact-info-1 textarea{
 	margin-left: 30px;
@@ -448,7 +448,10 @@ footer p a span
 .contact-info-2 span{
 	font-size: 40px;
 }
-
+#contact-vector{
+	min-width: 102%;
+	max-height: 100%;
+}
 
 @media(max-width:1317px)
 {
