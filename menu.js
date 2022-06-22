@@ -190,6 +190,7 @@ function displaycart(){
     let productcontainer=document.querySelector('.product-cart');
     let pricecontainer=document.querySelector('.price');
     
+    
 
     if(cartitem && productcontainer){
         productcontainer.innerHTML='';
@@ -217,8 +218,8 @@ function displaycart(){
     
 }
 
-
 onloadcartnumber();
 displaycart();
+
 
 
