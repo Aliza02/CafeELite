@@ -572,8 +572,9 @@ justify-content: flex-end;
 }
 
 .about-illustration{
-	width: 800px;
+	width: 700px;
 	height: 600px;
+
 }
 .about-header{
 	z-index: 1;
@@ -582,5 +583,20 @@ justify-content: flex-end;
 .about-header h1{
 	padding: 10px;
 	margin-top: 80px;
+}
+
+@media(max-width:1372px)
+{
+	.col-lg-6,.col-md-6{
+		width: 50%;
+	}
+	.about-illustration{
+		width: 100%;
+	}
+	.about-img{
+		width: 50%;
+		height: 50%;
+	}
+
 }
 
